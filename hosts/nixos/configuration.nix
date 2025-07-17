@@ -88,6 +88,8 @@
   # Install firefox.
   programs.firefox.enable = true;
 
+	programs.nix-ld.enable = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -98,6 +100,11 @@
     gcc
     neofetch
 		discord-ptb
+		fzf
+		wl-clipboard
+		gnumake
+		nodejs
+		stylua
     # wget
     # sbctl niv # do not delete!    
   ];
