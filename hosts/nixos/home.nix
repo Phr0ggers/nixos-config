@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ../../modules/home-manager/tmux.nix
+  ];
+
   home.username = "sebastianf";
   home.homeDirectory = "/home/sebastianf";
 
@@ -35,7 +39,7 @@
 
   programs.kitty = {
     enable = true;
-    
+
     themeFile = "GruvboxMaterialDarkMedium";
 
     font = {

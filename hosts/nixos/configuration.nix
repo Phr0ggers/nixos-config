@@ -2,7 +2,7 @@
 
 {
   imports =
-    [ 
+    [
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
     ];
@@ -96,15 +96,16 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim 
+    vim
     gcc
     neofetch
-		discord-ptb
-		fzf
-		wl-clipboard
-		gnumake
-		nodejs
-		stylua
+    discord-ptb
+    fzf
+    wl-clipboard
+    gnumake
+    nodejs
+    stylua
+    cargo rustc
     # wget
     # sbctl niv # do not delete!    
   ];
