@@ -1,16 +1,17 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ../../modules/home-manager/tmux.nix
-  ];
 
   home.username = "sebastianf";
   home.homeDirectory = "/home/sebastianf";
 
   home.stateVersion = "25.05"; # Please read the comment before changing.
 
+  nixpkgs.config.allowUnfree = true;
+
   home.packages = [
+    pkgs.discord-ptb
+    pkgs.tmux
   ];
 
   home.file = {
@@ -52,5 +53,6 @@
       confirm_os_window_close = 0;
     };
   };
+
 
 }

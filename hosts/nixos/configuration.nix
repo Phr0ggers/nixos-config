@@ -9,8 +9,8 @@
 
   # Bootloader.
   boot.loader.systemd-boot.enable = false;
-	boot.loader.systemd-boot.consoleMode = "max";
-	boot.loader.systemd-boot.configurationLimit = 10;
+  boot.loader.systemd-boot.consoleMode = "max";
+  boot.loader.systemd-boot.configurationLimit = 10;
   boot.loader.efi.canTouchEfiVariables = true;
 
 
@@ -80,15 +80,12 @@
     isNormalUser = true;
     description = "sebastianf";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
   };
 
   # Install firefox.
   programs.firefox.enable = true;
 
-	programs.nix-ld.enable = true;
+  programs.nix-ld.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -99,7 +96,6 @@
     vim
     gcc
     neofetch
-    discord-ptb
     fzf
     wl-clipboard
     gnumake
