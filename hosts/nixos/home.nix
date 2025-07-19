@@ -12,6 +12,8 @@
   home.packages = [
     pkgs.discord-ptb
     pkgs.tmux
+    pkgs.sysstat
+    pkgs.bat
   ];
 
   home.file = {
