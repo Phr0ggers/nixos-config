@@ -9,11 +9,11 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  home.packages = [
-    pkgs.discord-ptb
-    pkgs.tmux
-    pkgs.sysstat
-    pkgs.bat
+  home.packages = with pkgs; [
+    discord-ptb
+    tmux
+    sysstat
+    bat
   ];
 
   home.file = {

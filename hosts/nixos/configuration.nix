@@ -102,6 +102,7 @@
     nodejs
     stylua
     cargo rustc
+    fan2go
     # wget
     # sbctl niv # do not delete!    
   ];
