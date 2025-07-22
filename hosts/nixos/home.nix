@@ -25,6 +25,7 @@
 
   programs.home-manager.enable = true;
 
+  programs.bash.enable = true;
 
   programs.neovim = {
     enable = true;
@@ -54,6 +55,14 @@
       window_padding_width = 5;
       confirm_os_window_close = 0;
     };
+  };
+
+  programs.direnv = {
+    enable = true;
+    enableBashIntegration = true;
+    nix-direnv.enable = true;
+    silent = true;
+    
   };
 
 

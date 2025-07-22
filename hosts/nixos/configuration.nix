@@ -102,7 +102,7 @@
     nodejs
     stylua
     cargo rustc
-    fan2go
+    bluez
     # wget
     # sbctl niv # do not delete!    
   ];
@@ -119,6 +119,11 @@
     };
   };
 
+  programs.hyprland = {
+    enable = true;
+  };
+  
+  programs.waybar.enable = true;
   # programs.mtr.enable = true;
   # programs.gnupg.agent = {
   #   enable = true;
