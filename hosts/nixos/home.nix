@@ -14,6 +14,8 @@
     tmux
     sysstat
     bat
+    hyprpicker
+    hyprpaper
   ];
 
   home.file = {
@@ -54,6 +56,9 @@
       enable_audio_bell = "no";
       window_padding_width = 5;
       confirm_os_window_close = 0;
+      background_opacity = 0.93;
+      background_blur = 50;
+      scrollback_lines = 2000;
     };
   };
 
@@ -62,7 +67,6 @@
     enableBashIntegration = true;
     nix-direnv.enable = true;
     silent = true;
-    
   };
 
 
