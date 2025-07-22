@@ -1,6 +1,4 @@
-{ config, pkgs, ... }:
-
-{
+{ config, pkgs, ... }: {
 
   home.username = "sebastianf";
   home.homeDirectory = "/home/sebastianf";
@@ -20,6 +18,10 @@
 
   home.file = {
   };
+
+  imports = [
+    ../../modules/home-manager/wofi.nix
+  ];
 
   home.sessionVariables = {
     EDITOR = "nvim";
@@ -69,5 +71,6 @@
     silent = true;
   };
 
+  wofi.enable = true;
 
 }
