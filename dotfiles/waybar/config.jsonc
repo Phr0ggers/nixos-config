@@ -68,12 +68,12 @@
 
   "custom/power": {
     "format": "|  ",
-    "on-click": "wlogout"
+    "on-click": "wlogout -b 2"
   },
 
   "wireplumber": {
     "format": "{icon}{volume}% | ",
-    "format-muted": "",
+    "format-muted": " | ",
     "max-volume": 150,
     "scroll-step": 0.2,
     "format-icons": [" ", " ", " "],
@@ -89,7 +89,7 @@
 
   "memory": {
     "interval": 10,
-    "format": "  {used:0.1f}GiB / {total:0.1f}GiB | ",
+    "format": "   {used:0.1f}GiB / {total:0.1f}GiB | ",
     "tooltip": false
   }
 }
