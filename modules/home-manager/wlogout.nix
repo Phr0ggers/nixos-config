@@ -12,29 +12,31 @@
           action = "poweroff";
           text = "Shutdown";
           keybind = "s";
+          width = 0.2;
         }
         {
           label = "reboot";
           action = "reboot";
           text = "Reboot";
           keybind = "r";
+          width = 0.2;
         }
         {
           label = "logout";
           action = "loginctl terminate-user $USER";
           text = "Logout";
           keybind = "l";
+          width = 0.2;
         }
         {
           label = "windows";
           action = "";
           text = "Windows";
           keybind = "w";
+          width = 0.2;
         }
       ];
-      style = ''
-
-      '';
     };
+    home.file.".config/wlogout/style.css".source = ../../dotfiles/wlogout/style.css;
   };
 }
