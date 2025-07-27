@@ -1,0 +1,95 @@
+{
+  "layer": "top",
+  "output": "DP-1",
+  "modules-left": ["hyprland/workspaces", "custom/sep", "hyprland/workspaces#second"],
+  "modules-center": ["clock"],
+  "modules-right": ["memory", "cpu", "wireplumber", "bluetooth", "network", "custom/power"],
+
+  "hyprland/window": {
+     "max-length": 50
+  },
+
+  "custom/sep": {
+    "format": "|",
+  },
+
+  "clock": {
+    "interval": 10,
+    "format": " {:%A, %d %B %Y |  %H:%M} ",
+  },
+
+  "hyprland/workspaces": {
+     "persistent-workspaces": {
+      "DP-1": [1, 2, 3, 4, 5, 6, 7, 8]
+    },
+    "persistent-only": true,
+    "format": " {icon} {windows}",
+    "format-window-separator": "",
+    "window-rewrite-default": " ",
+    "window-rewrite": {
+      "class<firefox>": "󰈹 ",
+      "class<kitty>": " ",
+      "class<discord>": " "
+    },
+  },
+
+  "hyprland/workspaces#second": {
+    "name": "second",
+    "persistent-workspaces": {
+      "DP-1": [9, 10]
+    },
+    "persistent-only": true,
+    "format": " {icon} {windows}",
+    "format-window-separator": "",
+    "window-rewrite-default": " ",
+    "window-rewrite": {
+      "class<firefox>": "󰈹 ",
+      "class<kitty>": " ",
+      "class<discord>": " "
+    },
+  },
+
+  "bluetooth": {
+    "format": " {status} | ",
+    "format-disabled": "󰂲 Disabled | ",
+    "format-connected": " {num_connections} Connections | ",
+    "on-click": "overskride"
+  },
+
+  "network": {
+    "tooltip": false,
+    "interval": 1,
+    "format-wifi": "󰄠 {bandwidthDownBytes} 󰄝 {bandwidthUpBytes}",
+    "format-ethernet": "󰄠 {bandwidthDownBytes} 󰄝 {bandwidthUpBytes}",
+    "format-disconnected": " Disconnected",
+    "format-alt": "  {ifname}-{ipaddr} ",
+    "min-length": 22,
+  },
+
+  "custom/power": {
+    "format": "|  ",
+    "on-click": "wlogout"
+  },
+
+  "wireplumber": {
+    "format": "{icon}{volume}% | ",
+    "format-muted": "",
+    "max-volume": 150,
+    "scroll-step": 0.2,
+    "format-icons": [" ", " ", " "],
+    "tooltip": false,
+  },
+
+  "cpu": {
+    "interval": 10,
+    "format": " {usage}% | ",
+    "max-length": 10,
+    "tooltip": false
+  },
+
+  "memory": {
+    "interval": 10,
+    "format": "  {used:0.1f}GiB / {total:0.1f}GiB | ",
+    "tooltip": false
+  }
+}

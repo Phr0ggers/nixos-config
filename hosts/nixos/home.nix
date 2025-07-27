@@ -14,6 +14,7 @@
     bat
     hyprpicker
     hyprpaper
+    overskride
   ];
 
   home.file = {
@@ -22,6 +23,7 @@
   imports = [
     ../../modules/home-manager/wofi.nix
     ../../modules/home-manager/wlogout.nix
+    ../../modules/home-manager/waybar.nix
   ];
 
   home.sessionVariables = {
@@ -74,5 +76,7 @@
 
   wofi.enable = true;
   wlogout.enable = true;
+
+  waybar.enable = true;
 
 }

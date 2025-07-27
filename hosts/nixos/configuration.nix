@@ -123,8 +123,8 @@
   programs.hyprland = {
     enable = true;
   };
-  
-  programs.waybar.enable = true;
+
+
   # programs.mtr.enable = true;
   # programs.gnupg.agent = {
   #   enable = true;
