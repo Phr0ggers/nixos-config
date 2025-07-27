@@ -21,6 +21,7 @@
 
   imports = [
     ../../modules/home-manager/wofi.nix
+    ../../modules/home-manager/wlogout.nix
   ];
 
   home.sessionVariables = {
@@ -72,5 +73,6 @@
   };
 
   wofi.enable = true;
+  wlogout.enable = true;
 
 }

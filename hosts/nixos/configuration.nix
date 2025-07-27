@@ -71,9 +71,9 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
+    wireplumber.enable = true;
     # media-session.enable = true;
   };
-
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.sebastianf = {
@@ -90,6 +90,7 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -103,8 +104,8 @@
     stylua
     cargo rustc
     bluez
+    unixtools.netstat
     # wget
-    # sbctl niv # do not delete!    
   ];
 
   fonts.packages = with pkgs; [
