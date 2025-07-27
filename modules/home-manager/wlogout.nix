@@ -10,30 +10,30 @@
         {
           label = "shutdown";
           action = "poweroff";
-          text = "Shutdown";
+          text = "[S]hutdown";
           keybind = "s";
-          width = 0.2;
+          height = 0.5;
         }
         {
           label = "reboot";
           action = "reboot";
-          text = "Reboot";
+          text = "[R]eboot";
           keybind = "r";
-          width = 0.2;
+          height = 0.5;
         }
         {
           label = "logout";
           action = "loginctl terminate-user $USER";
-          text = "Logout";
+          text = "[L]ogout";
           keybind = "l";
-          width = 0.2;
+          height = 0.5;
         }
         {
           label = "windows";
           action = "";
-          text = "Windows";
+          text = "[W]indows";
           keybind = "w";
-          width = 0.2;
+          height = 0.5;
         }
       ];
     };

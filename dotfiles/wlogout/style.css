@@ -1,39 +1,58 @@
 * {
   background-image: none;
   box-shadow: none;
-  box-border: none;
+  background: transparent;
+  background-image: none;
+  border: none;
+  font-size: 25px;
+  font-weight: 600;
+  text-shadow: none;
+  transition: 0ms;
+  outline: none;
 }
 
 window {
-  background-color: rgba(12, 12, 12, 0.9);
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 200px 800px 200px 800px;
 }
 
 button {
-    border-radius: 0;
-    border-color: black;
-  text-decoration-color: #FFFFFF;
-    color: #FFFFFF;
-  background-color: #1E1E1E;
-  border-style: solid;
-  border-width: 1px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 25%;
+  color: #a8a8a8;
+  border: none;
+  padding: 30px 0px 30px 0px;
+  background-color: rgba(58, 58, 58, 1);
 }
 
-button:focus, button:active, button:hover {
-  background-color: #3700B3;
-  outline-style: none;
-}
-
-#lock {
-}
-
-#logout {
+button:focus{
+  background-color: #626262;
 }
 
 #shutdown {
+  margin : 300px 800px 0px 800px;
+  border-radius: 10px 10px 0px 0px;
+  border-top: 3px solid #ffaf00;
+  border-left: 3px solid #ffaf00;
+  border-right: 3px solid #ffaf00;
 }
 
 #reboot {
+  margin : 0px 800px 0px 800px;
+  border-radius: 0px;
+  border-left: 3px solid #ffaf00;
+  border-right: 3px solid #ffaf00;
+}
+
+#logout {
+  margin : 0px 800px 0px 800px;
+  border-radius: 0px;
+  border-left: 3px solid #ffaf00;
+  border-right: 3px solid #ffaf00;
+}
+
+#windows {
+  margin : 0px 800px 300px 800px;
+  border-radius: 0px 0px 10px 10px;
+  border-left: 3px solid #ffaf00;
+  border-right: 3px solid #ffaf00;
+  border-bottom: 3px solid #ffaf00;
 }

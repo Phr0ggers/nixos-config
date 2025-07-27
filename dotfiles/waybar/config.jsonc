@@ -68,7 +68,7 @@
 
   "custom/power": {
     "format": "|  ",
-    "on-click": "wlogout -b 2"
+    "on-click": "wlogout -b 1"
   },
 
   "wireplumber": {
