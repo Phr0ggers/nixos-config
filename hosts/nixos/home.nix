@@ -15,6 +15,7 @@
     hyprpicker
     hyprpaper
     overskride
+    nwg-look
   ];
 
   home.file = {
@@ -78,5 +79,4 @@
   wlogout.enable = true;
 
   waybar.enable = true;
-
 }

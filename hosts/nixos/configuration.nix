@@ -105,8 +105,14 @@
     cargo rustc
     bluez
     unixtools.netstat
+    bibata-cursors
     # wget
   ];
+
+  environment.variables = {
+    XCURSOR_THEME = "Bibata-Modern-Ice";
+    XCURSOR_SIZE = "24";
+  };
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
