@@ -13,7 +13,6 @@
     sysstat
     bat
     hyprpicker
-    hyprpaper
     overskride
     nwg-look
   ];

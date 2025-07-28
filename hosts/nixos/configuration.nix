@@ -5,6 +5,7 @@
     [
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
+      ../../modules/nixos/hypr.nix
     ];
 
   # Bootloader.
@@ -126,10 +127,7 @@
     };
   };
 
-  programs.hyprland = {
-    enable = true;
-  };
-
+  hypr.enable = true;
 
   # programs.mtr.enable = true;
   # programs.gnupg.agent = {
