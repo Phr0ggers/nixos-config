@@ -3,12 +3,11 @@
     hypr.enable = lib.mkEnableOption "enables hyprland and hyprpaper";
   };
 
-  config = lib.mkIf config.hypr.enable {
-    programs.hyprland = {
-      enable = true;
-    };
+  # Requires Hyprland to be enabled in configuration.nix
 
-    home.programs = with pkgs; [
+  config = lib.mkIf config.hypr.enable {
+
+    home.packages = with pkgs; [
       hyprpaper
     ];
 
