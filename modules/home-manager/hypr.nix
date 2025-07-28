@@ -3,7 +3,7 @@
     hypr.enable = lib.mkEnableOption "enables hyprland and hyprpaper";
   };
 
-  config = lib.mkIf config.waybar.enable {
+  config = lib.mkIf config.hypr.enable {
     programs.hyprland = {
       enable = true;
     };

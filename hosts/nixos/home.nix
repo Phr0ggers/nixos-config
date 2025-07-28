@@ -24,6 +24,7 @@
     ../../modules/home-manager/wofi.nix
     ../../modules/home-manager/wlogout.nix
     ../../modules/home-manager/waybar.nix
+    ../../modules/home-manager/hypr.nix
   ];
 
   home.sessionVariables = {
@@ -78,4 +79,6 @@
   wlogout.enable = true;
 
   waybar.enable = true;
+
+  hypr.enable = true;
 }

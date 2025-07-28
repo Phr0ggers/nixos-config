@@ -5,7 +5,6 @@
     [
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
-      ../../modules/nixos/hypr.nix
     ];
 
   # Bootloader.
@@ -126,8 +125,6 @@
       "sebastianf" = import ./home.nix;
     };
   };
-
-  hypr.enable = true;
 
   # programs.mtr.enable = true;
   # programs.gnupg.agent = {
