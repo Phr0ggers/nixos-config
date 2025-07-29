@@ -1,6 +1,8 @@
 { config, pkgs, inputs, ... }:
 
 {
+  boot.initrd.kernelModules = [ "amdgpu" ];
+
   imports =
     [
       ./hardware-configuration.nix
@@ -46,6 +48,11 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
+  services.xserver.videoDrivers = [ "amdgpu" ];
+
+  systemd.tmpfiles.rules = [
+    "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
+  ];
 
   # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = true;
@@ -79,7 +86,7 @@
   users.users.sebastianf = {
     isNormalUser = true;
     description = "sebastianf";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "video"];
   };
 
   # Install firefox.
@@ -95,18 +102,17 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim
-    gcc
     neofetch
     fzf
     wl-clipboard
-    gnumake
     nodejs
     stylua
     cargo rustc
     bluez
     unixtools.netstat
     bibata-cursors
-    # wget
+    unzip
+    wget
   ];
 
   environment.variables = {

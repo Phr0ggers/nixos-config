@@ -81,4 +81,6 @@
   waybar.enable = true;
 
   hypr.enable = true;
+
+  programs.btop.enable = true;
 }
