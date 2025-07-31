@@ -36,11 +36,19 @@
 
   programs.home-manager.enable = true;
 
+  programs.bash.shellAliases = {
+    ga = "git add *";
+    gc = "git commit -m";
+    gp = "git push";
+    se = "sudo -E";
+  };
+
   programs.bash.enable = true;
 
   programs.neovim = {
     enable = true;
   };
+
 
   programs.git = {
     enable = true;
@@ -69,6 +77,7 @@
       background_blur = 50;
       scrollback_lines = 2000;
     };
+
   };
 
   programs.direnv = {

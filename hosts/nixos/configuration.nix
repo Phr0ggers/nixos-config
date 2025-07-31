@@ -89,6 +89,13 @@
     extraGroups = [ "networkmanager" "wheel" "video"];
   };
 
+  environment.shellAliases = {
+    ga = "git add *";
+    gc = "git commit -m";
+    gp = "git push";
+    se = "sudo -E";
+  };
+
   # Install firefox.
   programs.firefox.enable = true;
 
