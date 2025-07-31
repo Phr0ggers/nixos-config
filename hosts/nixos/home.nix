@@ -15,6 +15,8 @@
     hyprpicker
     overskride
     nwg-look
+    grim
+    slurp
   ];
 
   home.file = {
@@ -25,6 +27,7 @@
     ../../modules/home-manager/wlogout.nix
     ../../modules/home-manager/waybar.nix
     ../../modules/home-manager/hypr.nix
+    ../../modules/home-manager/zathura.nix
   ];
 
   home.sessionVariables = {
@@ -83,4 +86,6 @@
   hypr.enable = true;
 
   programs.btop.enable = true;
+
+  zathura.enable = true;
 }
