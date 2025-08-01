@@ -141,6 +141,8 @@
 
   programs.hyprland.enable = true;
 
+  services.udisks2.enable = true;
+
   # programs.mtr.enable = true;
   # programs.gnupg.agent = {
   #   enable = true;
