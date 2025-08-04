@@ -102,7 +102,9 @@
   programs.nix-ld.enable = true;
 
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfree = true; 
+
+  services.hardware.openrgb.enable = true;
 
 
   # List packages installed in system profile. To search, run:
@@ -120,6 +122,7 @@
     bibata-cursors
     unzip
     wget
+    openrgb-with-all-plugins
   ];
 
   environment.variables = {
