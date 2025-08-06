@@ -123,6 +123,7 @@
     unzip
     wget
     openrgb-with-all-plugins
+    zip
   ];
 
   environment.variables = {

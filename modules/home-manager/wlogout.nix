@@ -30,7 +30,7 @@
         }
         {
           label = "windows";
-          action = "";
+          action = "systemctl reboot --boot-loader-entry=auto-windows";
           text = "[W]indows";
           keybind = "w";
           height = 0.5;
