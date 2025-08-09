@@ -30,7 +30,7 @@
         }
         {
           label = "windows";
-          action = "systemctl reboot --boot-loader-entry=auto-windows";
+          action = "systemctl reboot --boot-loader-entry=auto-windows --boot-loader-menu=1";
           text = "[W]indows";
           keybind = "w";
           height = 0.5;
