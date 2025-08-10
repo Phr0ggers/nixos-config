@@ -23,6 +23,11 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+  };
+
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -49,10 +54,6 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
   services.xserver.videoDrivers = [ "amdgpu" ];
-
-  systemd.tmpfiles.rules = [
-    "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
-  ];
 
   # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = true;
@@ -87,13 +88,6 @@
     isNormalUser = true;
     description = "sebastianf";
     extraGroups = [ "networkmanager" "wheel" "video"];
-  };
-
-  environment.shellAliases = {
-    ga = "git add *";
-    gc = "git commit -m";
-    gp = "git push";
-    se = "sudo -E";
   };
 
   # Install firefox.
