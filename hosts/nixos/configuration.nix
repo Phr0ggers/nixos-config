@@ -110,7 +110,7 @@
     wl-clipboard
     nodejs
     stylua
-    cargo rustc
+    # cargo rustc
     bluez
     unixtools.netstat
     bibata-cursors
